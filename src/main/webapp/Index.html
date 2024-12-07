@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Combined JSP Pages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4; /* Light background color */
+        }
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff; /* White background for sections */
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for a floating effect */
+        }
+        h1 {
+            color: #2C3E50; /* Dark color for headings */
+            font-size: 24px;
+        }
+        p {
+            font-size: 16px;
+            color: #34495E; /* Grayish text color for paragraphs */
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #3498db; /* Blue background for buttons */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #2980b9; /* Darker blue when hovering */
+        }
+        section:nth-child(odd) {
+            background-color: #ecf0f1; /* Light gray background for odd sections */
+        }
+        section:nth-child(even) {
+            background-color: #e7e7e7; /* Slightly darker gray for even sections */
+        }
+        section:hover {
+            background-color: #f0f0f0; /* Light gray background on hover for all sections */
+        }
+    </style>
+    <script>
+        function showPopup(message) {
+            alert(message);
+        }
+    </script>
+</head>
+<body>
+    <!-- Welcome Page -->
+    <section onclick="showPopup('Welcome to Spring MVC')">
+        <h1>Welcome Page</h1>
+        <p>Welcome to Spring MVC</p>
+    </section>
+
+    <!-- Test Page -->
+    <section onclick="showPopup('You are on the Test Page!')">
+        <h1>Test Page</h1>
+        <p>This is the Test Page</p>
+    </section>
+
+    <!-- Show Info Page -->
+    <section onclick="showPopup('Displaying Information for ID and Name')">
+        <h1>Show Info</h1>
+        <p>ID: ${id}</p>
+        <p>Name: ${name}</p>
+    </section>
+
+    <!-- Calculate Sum Page -->
+    <section onclick="showPopup('Calculating the sum of the given numbers!')">
+        <h1>Calculate Sum</h1>
+        <p>The sum is: ${sum}</p>
+    </section>
+
+    <!-- Employee Form Page -->
+    <section onclick="showPopup('Fill out the Employee Form below')">
+        <h1>Employee Form</h1>
+        <form action="#" method="post">
+            <label>ID:</label> <input type="text" name="id" /><br>
+            <label>Name:</label> <input type="text" name="name" /><br>
+            <label>Gender:</label> <input type="text" name="gender" /><br>
+            <label>Salary:</label> <input type="text" name="salary" /><br>
+            <button type="submit" onclick="showPopup('Form Submitted!')">Submit</button>
+        </form>
+    </section>
+
+    <!-- Add Numbers Page -->
+    <section onclick="showPopup('Adding numbers...')">
+        <h1>Add Numbers</h1>
+        <p>The result of addition is: ${result}</p>
+    </section>
+
+    <!-- Combine Strings Page -->
+    <section onclick="showPopup('Combining strings...')">
+        <h1>Combine Strings</h1>
+        <p>The combined result is: ${combined}</p>
+    </section>
+
+    <!-- Calculate Page -->
+    <section onclick="showPopup('Performing calculations...')">
+        <h1>Calculations</h1>
+        <p>Addition: ${addition}</p>
+        <p>Multiplication: ${multiplication}</p>
+    </section>
+</body>
+</html>
